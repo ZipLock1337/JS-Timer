@@ -1,0 +1,140 @@
+/* General style */
+html {
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, rgba(95, 158, 160, 0.9), rgba(240, 248, 255, 0.8));
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+/* Timer display */
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.display {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border: none;
+    border-radius: 10px;
+    background: #f0f8ff;
+    font-size: 36px;
+    font-weight: bold;
+    color: #2f4f4f;
+
+    width: 400px;
+    height: 60px;
+
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+
+.coating {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #8b4513;
+    border-radius: 30px;
+    width: 750px;
+    height: 150px;
+    background: linear-gradient(135deg, saddlebrown, #d2691e);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+
+    margin-bottom: 40px;
+}
+
+.btn_box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    width: 350px;
+}
+
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 300px;
+    height: 50px;
+
+    border: none;
+    border-radius: 25px;
+    background-color: #000;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.btn:hover {
+    color: #000;
+    background-color: #fff;
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.btn:active {
+    transition: all 0.1s ease-in;
+    transform: scale(1, -1);
+}
+
+@media (max-width: 768px) {
+    .coating {
+        width: 550px;
+    }
+}
+
+@media (max-width: 555px) {
+    .coating {
+        width: 450px;
+    }
+}
+
+@media (max-width: 470px) {
+    .coating {
+        width: 350px;
+    }
+
+    .display {
+        width: 300px;
+    }
+}
+
+@media (max-width: 375px) {
+    .btn_box {
+        gap: 20px;
+        width: 300px;
+    }
+
+    .coating {
+        width: 300px;
+    }
+
+    .display {
+        width: 200px;
+    }
+}
